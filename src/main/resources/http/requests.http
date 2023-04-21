@@ -1,0 +1,43 @@
+GET localhost/api/students?page=0&size=2
+Authorization: Bearer 1732ec34-0389-43a2-b8b9-e8eae21d1abb
+
+###
+
+GET localhost/logout
+Authorization: Bearer 16de0542-20f1-4461-b8fa-0102d88db943
+
+###
+
+GET localhost/api/students/777
+Authorization: Bearer 16de0542-20f1-4461-b8fa-0102d88db943
+
+### ADMIN
+
+POST localhost/api/login
+Content-Type: application/json
+
+{
+  "email": "simankovd@mail.ru",
+  "password": "d!"
+}
+
+### USER
+
+POST localhost/api/login
+Content-Type: application/json
+
+{
+  "email": "bb@mail.ru",
+  "password": "d!"
+}
+
+###
+
+POST localhost/api/students
+Content-Type: application/json
+Authorization: Bearer 207eeabf-72fd-4bb3-ab42-615937776c06
+
+{
+  "firstName" : "Ne Denis",
+  "lastName" : "Baranovski"
+}
